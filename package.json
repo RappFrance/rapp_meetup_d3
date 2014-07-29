@@ -1,0 +1,14 @@
+{
+  "name": "rapp_meetup_d3",
+  "version": "0.0.0",
+  "description": "experiment d3.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexis Janvier<alexis.janvier@rappfrance.com>",
+  "dependencies": {
+    "gulp": "~3.8.6",
+    "browser-sync": "~1.3.0"
+  }
+}

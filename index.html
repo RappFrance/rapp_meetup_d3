@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+   <title>D3.js experiment</title>
+   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style type="text/css">
+   </style>
+</head>
+<body>
+
+    <h1 id="title">Rapp Meetup : D3.js</h1>
+
+    <ul>
+      <li>un élément de liste</li>
+      <li>un autre élément de liste, <em><strong>en italic</strong></em></li>
+    </ul>
+
+    <table class="table" style="display:none">
+     <thead>
+       <tr><td>Un</td><td>Deux</td><td>Trois</td><td>Quatre</td><td>Cinq</td></tr>
+     </thead>
+     <tbody>
+       <tr><td>a</td><td>z</td><td>e</td><td>r</td><td>t</td></tr>
+       <tr><td>q</td><td>s</td><td>d</td><td>f</td><td>g</td></tr>
+       <tr><td>w</td><td>x</td><td>c</td><td>v</td><td>b</td></tr>
+     </tbody>
+   </table>
+
+   <a class="btn btn-default" href="page2.html">suite</a>
+
+
+
+   <script src="bower_components/d3/d3.min.js"></script>
+   <script type="text/javascript">
+
+    // Selection classique d'un élément du DOM
+    //document.getElementsByTagName('strong')[0].style.setProperty('text-decoration', 'underline');
+    
+    // Manipulation du DOM avec D3
+    //d3.select('strong').style('text-decoration', 'underline');
+
+    //d3.select("#title").text("D3.js: la manipulation du DOM");
+    
+    //d3.select("table").style("display", "block");
+    //d3.selectAll('thead').selectAll('td').style('font-weight', 'bold');
+
+    //var tableArray = d3.selectAll('tbody tr').selectAll('td');
+    //tableArray.style('color', function (d, i) { return i%2 ? 'green' : 'red'; })
+
+   </script>
+</body>
