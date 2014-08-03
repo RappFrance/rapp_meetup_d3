@@ -3,11 +3,20 @@
    <title>D3.js</title>
    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
    <style type="text/css">
+   .bar {
+        height: 25px;
+        background-color: blue;
+        border-bottom: 1px solid white;
+        color: white;
+   }
    </style>
 </head>
 <body>
 
     <h1 id="title">D3.j : lier des données au DOM</h1>
+    <div class="bar">.</div>
+    <div class="bar">.</div>
+    <div class="bar">.</div>
 
    <a class="btn btn-default" href="page3.html">suite</a>
 
@@ -15,6 +24,13 @@
 
    <script src="bower_components/d3/d3.min.js"></script>
    <script type="text/javascript">
+
+       var data = [10, 30, 60];
+       d3.selectAll('.bar').data(data)  
+        .text(function(d){return d})
+        .style('width', function(d) {
+            return d + '%';
+       })
 
    </script>
 </body>
