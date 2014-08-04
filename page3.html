@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+   <title>D3.js</title>
+   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style type="text/css">
+      svg {
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+      }
+      svg path {
+        stroke: red;
+        stroke-width: 5px;
+        fill: orange;
+      }
+      svg text {
+        font-size: 45px;
+        font-family: sans-serif;
+        fill:blue; /* not `color` or `font-color` */
+      }*/
+   </style>
+</head>
+<body>
+
+    <h1 id="title">D3.j : Dataviz & Svg</h1>
+    <div id="svgbox">
+    </div>
+
+    <!-- <svg><circle cx="223" cy="83" r="54"/> <circle cx="83" cy="83" r="54"/> <circle cx="152" cy="125" r="16"/></svg> -->
+
+    <!-- <svg><rect x="100" y="15" width="150" height="150"></rect></svg> -->
+
+    <!-- <svg><line x1="10" y1="10" x2="400" y2="400" stroke="blue" stroke-width="4"></line></svg> -->
+
+      <!-- <svg>
+        <path d="M 100 50 L 300 50 L 200 200 z"></path>
+        <text x="150" y="100">Rapp</text>
+      </svg> -->
+
+   <a style="margin:30px" class="btn btn-default" href="page4.html">suite</a>
+
+   <script src="bower_components/d3/d3.min.js"></script>
+   <script type="text/javascript">
+
+      // d3.select("body")
+      //   .append("svg")
+      //   .selectAll(".circle")
+      //   .data([1,2,3,4])
+      //   .enter()
+      //   .append("circle")
+      //   .attr("cx", function(d,i) {
+      //     return d*10*(i+1);
+      //   })
+      //   .attr("cy", function(d,i) {
+      //     return d*10*(i+1);
+      //   })
+      //   .attr("r", function(d,i) {
+      //     return (i+1)*d*5;
+      //   })
+      //   .attr("fill", 'rgba(200,200,300,0.4)')
+
+
+      // var lineGenerator=d3.svg.line()
+      //   .x(function(d) { return d[0]; })
+      //   .y(function(d) { return d[1]; });
+      // var lineData=[[154,14],[35,172],[251,127],[31,58],[157,205],[154, 14]];
+      // d3.select('body').append('svg')
+      //   .append('path').datum(lineData).attr('d', lineGenerator);
+
+
+   </script>
+</body>
