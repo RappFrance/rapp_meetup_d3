@@ -3,9 +3,18 @@
    <title>D3.js</title>
    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
    <style type="text/css">
+   #mygraph {
+    margin: 30px;
+   }
    .bar {
         height: 25px;
-        background-color: blue;
+        background-color: orange;
+        border-bottom: 1px solid white;
+        color: white;
+   }
+   .smallbar {
+        height: 4px;
+        background-color: orange;
         border-bottom: 1px solid white;
         color: white;
    }
@@ -14,23 +23,69 @@
 <body>
 
     <h1 id="title">D3.j : lier des données au DOM</h1>
-    <div class="bar">.</div>
-    <div class="bar">.</div>
-    <div class="bar">.</div>
+    <div id="mygraph">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
-   <a class="btn btn-default" href="page3.html">suite</a>
+   <a style="margin:30px" class="btn btn-default" href="page3.html">suite</a>
 
 
 
    <script src="bower_components/d3/d3.min.js"></script>
    <script type="text/javascript">
 
-       var data = [10, 30, 60];
-       d3.selectAll('.bar').data(data)  
-        .text(function(d){return d})
-        .style('width', function(d) {
-            return d + '%';
-       })
+      //var data = [10, 30, 60, 20]; // +ou- 1
+
+      // d3.select('#mygraph').selectAll('div').data(data)  
+      //  .text(function(d){return d})
+      //  .style('width', function(d) {
+      //      return d + '%';
+      //  })
+      //  .attr('class', 'bar');
+
+      // function barr(data) {
+      //   var myBarr = d3.select('#mygraph').selectAll('div');
+
+      //   var bindedBarr = myBarr.data(data);
+
+      //   var enterBarr = bindedBarr.enter();
+
+      //   var exitBarr = bindedBarr.exit();
+
+      //   enterBarr.append('div');
+
+      //   bindedBarr.text(function(d){return d})
+      //     .style('width', function(d) {
+      //       return d + '%';
+      //     })
+      //     .attr('class', 'bar');
+
+      //   exitBarr.remove();
+      // };
+
+      //var data = [10, 30, 60, 20]
+      //barr(data);
+
+
+      // d3.select('#mygraph').selectAll('div')
+      //   .data(data)
+      //   .enter().append('div')
+      //   .text(function(d){return d})
+      //   .style('width', function(d) {
+      //     return d + '%';
+      //   })
+      //   .attr('class', 'bar')
+      //   .exit().remove();
+         
+      // var data = d3.range(75);
+      // d3.select('#mygraph').selectAll('div')
+      //   .data(data)
+      //   .enter().append('div')
+      //   .style('width', function(d){ return d + '%'; })
+      //   .attr('class', 'smallbar')
+      //   .exit().remove();
 
    </script>
 </body>

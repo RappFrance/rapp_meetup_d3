@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<style>
+    /* make paths 2px wide and white, and give them a black fill. */
+    path { stroke: white; stroke-width: 2; fill: black; }
+    /* make the svg and body black */
+    body, svg {
+        background-color: black;
+        height: 700px;
+        width: 700px;
+    }
+</style>
+</head>
+<body>
+<script>
+    var svg = d3.select('body').append('svg');
+    // generate random data that squiggles a lot in the middle
+    var data = d3.range(50, 650, 10).map(function(y_offset){
+        // generate a line of the form [[6,7],[22,34],...]
+        return d3.range(100, 700, 10).map(function(d){
+            var y = d;
+            if(y < 300 || y > 500) y = 50; else y = 500;
+            return [d, y_offset - Math.random() * Math.random() * y / 10];
+        });
+    });
+    // create our line generator
+    var line = d3.svg.line()
+        .x(function(d) { return d[0]; })
+        .y(function(d) { return d[1]; })
+        .interpolate("basis");
+    // create several path elements using our line generator and squiggle data
+    svg.selectAll('path')
+        .data(data)
+        .enter()
+        .append('path')
+        .attr('d', line);
+</script>
+</body>
+</html>
