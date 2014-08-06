@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+   <title>La programmation fonctionnelle</title>
+   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style type="text/css">
+   </style>
+</head>
+<body>
+
+    <h1 id="title">La programmation fonctionnelle</h1>
+
+    <h3>La programmation fonctionnelle est un paradigme de programmation qui considère le calcul en tant qu'évaluation de fonctions mathématiques et rejette le changement d'état et la mutation des données. Elle souligne l'application des fonctions, contrairement au modèle de programmation impérative qui met en avant les changements d'état.</h3>
+    
+   <script type="text/javascript">
+
+    var Loom = function(options) {
+      this.clothing = options && options.clothing || 'sweatshirt';
+      this.make = function() {
+        console.log('I made a ' + this.clothing);
+      };
+      this.setClothing = function (clothing) {
+        this.clothing = clothing;
+      };
+      this.getClothing = function () {
+        return this.clothing;
+      };
+    };
+
+    // var Loom = function(options) {
+    //   this.clothing = options && options.clothing || 'sweatshirt';
+    // };
+    // Loom.prototype.make = function() {
+    //   console.log('I made a ' + this.clothing);
+    // };
+    // Loom.prototype.setClothing = function (clothing) {
+    //     this.clothing = clothing;
+    // };
+    // Loom.prototype.getClothing = function () {
+    //     return this.clothing;
+    // };
+
+    var loom = new Loom({clothing: 'pull-over'});
+    loom.make();
+    loom.setClothing('bonnet');
+    loom.make();
+
+    // var Loom = function(options) {
+    //   var clothing = options && options.clothing || 'sweatshirt';
+    //   // la fonction garde la mémoire de son contexte d'initialisation => Closure
+    //   return function () {
+    //     console.log('I made a ' + clothing);
+    //   };
+    // };
+    // var loom = Loom({clothing: 'pull-over'});
+    // loom();
+     
+    // var Loom = function(options) {
+    //   var clothing = options && options.clothing || 'sweatshirt';
+    //   var make = function () {
+    //     console.log('I made a ' + clothing);
+    //   };
+    //   make.clothing = function () {
+    //     if(arguments.length === 0) {
+    //       console.log('bin alors');
+    //       return clothing;
+    //     };
+    //     clothing = arguments[0];
+    //     return make;
+    //   }
+    //   return make;
+    // }
+    // var loom = Loom({clothing: 'pull-over'});
+    // loom();
+    // loom.clothing('pant');
+    // loom();
+
+   </script>
+</body>
